@@ -1,0 +1,283 @@
+@import url('https://fonts.googleapis.com/css2?family=Mukta+Mahee&display=swap');
+
+@font-face {
+    font-family: "Berlin Sans";
+    src: url('fonts/BerlinSans.ttf');
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+img {
+    width: 100%;
+}
+
+body {
+    overflow: hidden;
+    font-family: 'Mukta Mahee', sans-serif;
+}
+
+section {
+    width: 100%;
+    height: 100vh;
+    /*overflow: hidden;*/
+}
+
+
+/*******ACCUEIL********/
+
+.accueil {
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    /*
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    */
+
+    background-image: url(img/background/Fichier\ 1.png), url(img/background/Fichier\ 2.png), url(img/background/Fichier\ 3.png), url(img/background/Fichier\ 4.png);
+    background-position: bottom -15% left -2%, top -13% left -1%, top 5% right -4%, bottom -15% right -2%;
+    background-size: 35%, 35%, 35%, 40%;
+    background-repeat: no-repeat;
+}
+
+.nom {
+    z-index: 6;
+    /*position: absolute;*/
+    /*
+    top: 30%;
+    left: 40%;
+    width: 35vw;
+    */
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+    /*margin: auto;*/
+}
+
+.accueil h1 {
+    font-size: 3em;
+    font-family: "Berlin Sans";
+    display: flex;
+    flex-direction: column;
+    color: #5456c2;
+}
+
+.accueil h2 {
+    text-align: right;
+    margin-bottom: 2%;
+    color: #5456c2;
+}
+
+
+.accueil h1 span {
+    text-transform: uppercase;
+    font-size: 5rem;
+}
+
+.accueil nav {
+    z-index: 5;
+    /*
+    position: absolute;
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: space-between;
+    */
+}
+
+.bouton {
+    position: relative;
+    text-decoration: none;
+    color: #F7B0DE;
+    padding: 0.5em 2em;
+    background: rgba(255, 255, 255, 0.6);
+    border-radius: 14px;
+    text-align: center;
+}
+
+.bouton::before {
+    content:"";
+    position:absolute;
+    top:0;
+    left:0;
+    right:0;
+    bottom:0;
+    border-radius:9px; 
+    padding:3px; 
+    background:linear-gradient(45deg,#F7B0DE,#BFE6FF); 
+    -webkit-mask: 
+        linear-gradient(#fff 0 0) content-box, 
+        linear-gradient(#fff 0 0);
+    -webkit-mask-composite: destination-out; 
+    mask-composite: exclude;
+}
+
+.bouton:hover {
+    background: linear-gradient(45deg,#F7B0DE,#BFE6FF);
+    color: white;
+    border: none;
+}
+
+
+/*************BACKGROUND ACCUEIL********************/
+
+.background {
+    z-index: -5;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.background div {
+    position: absolute;
+    z-index: -1;
+}
+
+
+.bas {
+    bottom: -15%;
+}
+
+.gauche {
+    left: -2%;
+} 
+
+.droite {
+    right: -2%;
+}
+
+.bas.droite {
+    background-image: url("img/background/Fichier\ 4.png");
+    background-size: cover;
+    width: calc(1064px / 2);
+    height: calc(983px / 2);
+    transform: rotate(25deg);
+}
+
+.bas.gauche {
+    background-image: url("img/background/Fichier\ 1.png");
+    background-size: cover;
+    width: calc(990px / 2);
+    height: calc(929px / 2);
+}
+
+.haut.gauche {
+    background-image: url("img/background/Fichier\ 2.png");
+    background-size: cover;
+    width: calc(768px / 1.5);
+    height: calc(555px / 1.5);
+    top: -13%;
+    left: -1%;
+}
+
+.haut.droite {
+    background-image: url("img/background/Fichier\ 3.png");
+    background-size: cover;
+    width: calc(716px / 2);
+    height: calc(488px /2);
+    right: 5%;
+    top: -4%;
+}
+
+/***********MOI + BULLES*************/
+
+.images {
+    display: flex;
+    position: absolute;
+    bottom: 0%;
+    left: 5%;
+}
+
+.moi {
+    z-index: 8;
+    width: 20vw;
+}
+
+.hey {
+    position: absolute;
+    left: 54%;
+    top: -7%;
+}
+
+.look {
+    position: absolute;
+    left: 1%;
+    top: -12%;
+}
+
+.listen {
+    position: absolute;
+    left: 70%;
+    top: 9%;
+}
+
+.watch {
+    position: absolute;
+    left: 29%;
+    top: -23%;
+}
+
+.hello {
+    position: absolute;
+    left: 75%;
+    top: 27%;
+}
+
+.moi:hover {
+    cursor: pointer;
+}
+
+.bulle {
+    z-index: 16;
+}
+
+.bullesNavi {
+    z-index: 15;
+}
+
+.bulle {
+    width: 10vw;
+    display: none;
+}
+
+/******CV*********/
+
+.cv {
+    background-color: white;
+}
+
+.cv h2 {
+    color: #5456c2;
+}
+
+.cv article {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.article main {
+    width: 50vw;
+}
+
+.photo {
+    width: 20vw;
+    height: 20vw;
+    border-radius: 35px;
+    overflow: hidden;
+    background-color: #5456c2;
+}
+
+/********** MEDIA QUERIES ***************/
+
+/**********small devices************/
+/**********small devices************/
+/**********small devices************/
+/**********small devices************/
