@@ -59,7 +59,6 @@ h2 {
     text-align: right;
 }
 
-
 .accueil h1 span {
     text-transform: uppercase;
     font-size: 5rem;
@@ -197,6 +196,7 @@ h2 {
 
 /********** MEDIA QUERIES ***************/
 
+/*pour les tablettes*/
 @media screen and (max-width: 992px){
     .accueil {
         height: 100vh;
@@ -214,6 +214,7 @@ h2 {
     }
 }
 
+/*pour les mobiles*/
 @media screen and (max-width : 600px) {
     .accueil {
         background-image: url(img/background/Fichier\ 2.png), url(img/background/Fichier\ 4.png);
